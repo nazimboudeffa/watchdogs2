@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Watchdogs Gameboy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: 'gameboy';
+            src: url('assets/fonts/Early_GameBoy.ttf');
+        }
+
+        canvas {
+            image-rendering: optimizeSpeed;
+            /* Older versions of FF          */
+            image-rendering: -moz-crisp-edges;
+            /* FF 6.0+                       */
+            image-rendering: -webkit-optimize-contrast;
+            /* Safari                        */
+            image-rendering: -o-crisp-edges;
+            /* OS X & Windows Opera (12.02+) */
+            image-rendering: pixelated;
+            /* Awesome future-browsers       */
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE                            */
+            margin: 0 auto;
+            transform: scale(2);
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        #content {
+            padding-top: 195px;
+            width: 580px;
+            background: url(./assets/images/back.jpg) center 0 no-repeat;
+            display: block;
+            margin: 0 auto;
+            float: none;
+            height: 950px;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js"></script>
+
+    <script src="game.js"></script>
+    <script src="states/boot.js"></script>
+    <script src="states/intro.js"></script>
+    <script src="states/menu.js"></script>
+
+    <div class="font_preload" style="display: none;">
+        <span style="font-family: 'gameboy';"></span>
+    </div>
+
+</body>
+
+</html>
