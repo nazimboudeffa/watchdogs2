@@ -27,6 +27,12 @@ IntroState.prototype = {
       a.scale.setTo(0.1)
       a.anchor.set(.5, .5);
 
+      this.bg = this.game.make.sprite(0, 0, 'syz');
+      this.bg.alpha = 0.3;
+      this.texture = this.game.add.renderTexture(44, 40);
+      this.texture.renderXY(this.bg, 0, 0, false);
+      this.game.cache.addImage('tsTexture', this.texture.getImage());
+
       // Mouse click events
 		  this.translate();
 
